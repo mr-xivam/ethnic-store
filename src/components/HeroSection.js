@@ -1,19 +1,14 @@
 import React from 'react';
-import DressSlider from './DressSlider';
-import About from './About';
 
-import FAQs from './FAQs';
-import Contact from './Contact';
-import Blog from './Blog';
-import HeroSection from './HeroSection';
-import DressCategories from './DressCategories';
-
-
-const Home = () => {
+const HeroSection = () => {
   return (
     <main className="max-w-7xl mx-auto p-6 sm:p-12 min-h-[80vh] flex flex-col justify-start bg-gradient-to-r from-indigo-100 to-purple-200 rounded-lg shadow-lg">
-      <HeroSection/>
-      {/* <section className="mb-12">
+      
+      {/* 🔥 SALE BANNER Section */}
+     
+
+      {/* 🎯 Hero Section */}
+      <section className="mb-12">
         <h1 className="text-4xl sm:text-6xl font-extrabold text-pink-900 mb-4 leading-tight">
           It's time to hit refresh
         </h1>
@@ -26,34 +21,22 @@ const Home = () => {
             SEASON ENDING SALE
           </span>
         </div>
+        <section className="w-full mb-12">
+        <img
+          src="https://www.aachho.com/cdn/shop/files/Carnival-Sale-1B.jpg?v=1747981430" // Replace with your banner
+          alt="Season Sale Banner"
+          className="w-full h-auto rounded-xl shadow-lg object-cover"
+        />
+      </section>
         <button
           className="bg-pink-700 hover:bg-indigo-800 text-white font-semibold px-8 py-3 rounded-md shadow-md transition"
           onClick={() => alert("Discover more clicked!")}
         >
           DISCOVER MORE
         </button>
-      </section> */}
-
-      {/* Dresses Collection and Slider */}
-      <DressSlider />
-<DressCategories/>  
-         <Blog/>
-         <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
-  {/* About Section */}
-  <div className="flex-1">
-    <About />
-  </div>
-
-  {/* Contact Section */}
-  <div className="w-full lg:w-1/3">
-    <Contact />
-  </div>
-</div>
-        
-        <FAQs />
-      
+      </section>
     </main>
   );
 };
 
-export default Home;
+export default HeroSection;

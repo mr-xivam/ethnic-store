@@ -1,4 +1,6 @@
 import React from 'react';
+import DressCategories from './DressCategories';
+import DressSlider from './DressSlider';
 
 const Riwaz = () => {
   return (
@@ -14,6 +16,8 @@ const Riwaz = () => {
       <div className="rounded bg-indigo-100 p-6 text-indigo-900 font-semibold">
         Experience the beauty of cultural tradition blended with contemporary trends, only at Sapna’s Riwaz.
       </div>
+      <DressSlider/>
+      <DressCategories/>
     </main>
   );
 };
