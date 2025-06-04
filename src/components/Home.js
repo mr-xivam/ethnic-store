@@ -7,6 +7,10 @@ import Contact from './Contact';
 import Blog from './Blog';
 import HeroSection from './HeroSection';
 import DressCategories from './DressCategories';
+import Testimonials from './Testinonials';
+
+
+
 
 
 const Home = () => {
@@ -33,10 +37,12 @@ const Home = () => {
           DISCOVER MORE
         </button>
       </section> */}
+      
 
       {/* Dresses Collection and Slider */}
       <DressSlider />
 <DressCategories/>  
+<Testimonials/>
          <Blog/>
          <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
   {/* About Section */}
