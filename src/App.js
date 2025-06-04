@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import About from './components/About';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
+import FAQs from './components/FAQs';
+import Riwaz from './components/Riwaz';
+import Cart from './components/Cart';
 
-function App() {
+const App = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0.0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar cartCount={cartCount} cartTotal={cartTotal} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/sapnas-riwaz" element={<Riwaz />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
